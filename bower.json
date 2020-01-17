@@ -1,0 +1,19 @@
+{
+  "name": "templateGulp",
+  "description": "",
+  "main": "main.js",
+  "license": "ISC",
+  "homepage": "https://github.com/MaxGrachikov/templateGulp",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/js/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize.css": "^8.0.1",
+    "jquery": "^3.4.1"
+  }
+}
