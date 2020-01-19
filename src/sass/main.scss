@@ -1,3 +1,11 @@
-body {
-	background: blue;
+* {
+	box-sizing: border-box;
 }
+
+@import "grid"; // настройка сетки
+
+@import "fonts"; // Настройка шрифтов
+
+@import "interface"; // Настройка интерфейсов
+
+@import "blocks/header"; // Шапка сайта

@@ -1,2 +1,83 @@
-body {
-  background: blue; }
+* {
+  box-sizing: border-box; }
+
+.container {
+  max-width: 1536px;
+  margin: auto; }
+
+@font-face {
+  font-family: 'Segoe Print Bold';
+  src: url("../fonts/SegoePrint-Bold.eot");
+  src: url("../fonts/SegoePrint-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/SegoePrint-Bold.woff2") format("woff2"), url("../fonts/SegoePrint-Bold.woff") format("woff"), url("../fonts/SegoePrint-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Segoe Print';
+  src: url("../fonts/SegoePrint.eot");
+  src: url("../fonts/SegoePrint.eot?#iefix") format("embedded-opentype"), url("../fonts/SegoePrint.woff2") format("woff2"), url("../fonts/SegoePrint.woff") format("woff"), url("../fonts/SegoePrint.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+.title {
+  font-family: 'Segoe Print', sans-serif;
+  font-size: 24pt; }
+
+header {
+  background-image: url("../../images/hat/Hat.png");
+  box-sizing: cover;
+  height: 600px; }
+
+.header-wrapper {
+  display: flex;
+  justify-content: center; }
+  .header-wrapper__col-one {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 460px;
+    padding-top: 16px; }
+  .header-wrapper__col-two {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-basis: 75%;
+    padding-top: 83px; }
+  .header-wrapper__title {
+    text-align: center;
+    color: #691302;
+    margin: 0px; }
+  .header-wrapper__images-barrel {
+    display: block;
+    margin: auto; }
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px;
+  padding: 0px; }
+  .menu__logo {
+    margin-right: 8px;
+    margin-top: 0px; }
+  .menu__ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none; }
+  .menu__punkt {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    margin-top: 13px;
+    background: #833f1b;
+    height: 45px;
+    border-radius: 50px;
+    line-height: 35px;
+    border: 6px solid #424245; }
+  .menu__href {
+    cursor: pointer;
+    text-decoration: none;
+    color: #ffee52;
+    font-family: 'Segoe Print', sans-serif; }

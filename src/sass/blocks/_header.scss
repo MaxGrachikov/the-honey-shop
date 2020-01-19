@@ -1,0 +1,74 @@
+header {
+	background-image: url("../../images/hat/Hat.png");
+	box-sizing: cover;
+	height: 600px; 
+}
+
+.header-wrapper {
+	display: flex;
+	justify-content: center;
+	&__col-one {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		height: 460px;
+		padding-top: 16px;
+	}
+
+	&__col-two {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		flex-basis: 75%;
+		padding-top: 83px;
+	}
+
+	&__title {
+		text-align: center;
+		color: #691302;
+		margin: 0px;
+	}
+
+	&__images-barrel {
+		display: block;
+		margin: auto;
+	}
+
+}
+
+.menu {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0px;
+	padding: 0px;
+	&__logo {
+		margin-right: 8px;
+		margin-top: 0px;
+	}
+	&__ul {
+		margin: 0px;
+		padding: 0px;
+		list-style: none;
+	}
+	&__punkt {
+		margin: 0px;
+		padding: 0px;
+		text-align: center;
+		margin-top: 13px;
+		background: #833f1b;
+		height: 45px;
+		border-radius: 50px;
+		line-height: 35px;
+		border: 6px solid #424245;
+
+	}
+	&__href {
+		cursor: pointer;
+		text-decoration: none;
+		color: #ffee52;
+		@include regular;
+	}
+}
