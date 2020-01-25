@@ -76,7 +76,6 @@ function optimizationImages() {
 function compilationJS() {
 	return gulp.src(jsFiles)
     	.pipe(concat('main.js'))
-    	.pipe(babel())
     	.pipe(uglify())
     	.pipe(gulp.dest('./build/js'))
     	.pipe(browserSync.stream());
