@@ -1,0 +1,76 @@
+.main {
+	z-index: 0;
+	margin-top: -132px;
+	border-bottom: 15px solid #833f1b;
+	&__background-cover {
+		background: rgba(245, 153, 11, 0.7);
+		height: 100%; 
+	}
+	&__background-image {
+		background-image: url("../../../build/images/AboutUs/Background.jpg");
+		background-size: cover;
+		height: 1069px;
+	}
+}
+
+.container-title {
+	display: block;
+	padding-top: 140px;
+	text-align: center;
+}
+
+.wrapper-main {
+	display: flex;
+	justify-content: center;
+
+	&__col-one {
+		display: flex;
+		flex-direction: column;
+		flex-basis: 30%;
+		padding-right: 40px;
+	}
+
+	&__text-one {
+		width: 539px;
+		background: #fe960b;
+		border: 3px solid #5f2303;
+		border-radius: 50px;
+		text-align: center;
+		@include bold;
+		color: #5f2303;
+		padding: 30px;
+	}
+
+	&__text-two {
+		width: 565px;
+		background: #fe960b;
+		border: 3px solid #5f2303;
+		border-radius: 50px;
+		text-align: center;
+		@include bold;
+		color: #5f2303;
+		padding: 30px;
+	}
+
+	&__bees {
+		width: 100%;
+	}
+
+	&__photo2 {
+		border: 4px solid black;
+		border-radius: 5px;
+	}
+
+	&__photo1 {
+		border: 4px solid black;
+		border-radius: 5px;
+		width: 507px;
+	}
+
+	&__col-two {
+		display: flex;
+		flex-direction: column;
+		flex-basis: 30%;
+		justify-content: space-between;
+	}
+}
