@@ -2,9 +2,9 @@ header {
 	position: relative;
 	z-index: 1;
 	background-image: url("../../images/hat/Hat.png");
-	box-sizing: cover;
+	box-sizing: contain;
 	height: 600px;
-	@media screen and (max-width: 754px) {
+	@media screen and (max-width: 360px) {
 		height: auto;
 	}
  
@@ -47,9 +47,6 @@ header {
 		display: block;
 		margin: auto;
 		max-width: 80%;
-		@media screen and (max-width: 360px) {
-			width: 300px;
-		}
 	}
 
 	&__burger {

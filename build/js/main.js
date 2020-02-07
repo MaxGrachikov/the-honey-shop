@@ -1,1 +1,1 @@
-$(".header-wrapper__burger").click(function(){$(".header-wrapper__burger,.menu").toggleClass("active")});
+$(".header-wrapper__burger").click(function(){$(".header-wrapper__burger,.menu").toggleClass("active")}),$(".header-wrapper__burger").on("click",function(){"relative"==$("header").css("position")?$("header").css("position","static"):$("header").css("position","relative")});
