@@ -9,8 +9,24 @@
 	&__background-image { 
 		background-image: url("../../build/images/AboutUs/Background.jpg");
 		background-size: cover;
-		height: 1069px;
+		height: auto;
+		@media  screen and (min-width: 1167px) {
+			height: 1070px;
+		}
+
+		@media  screen and (max-width: 1165px) {
+			height: 990px;
+		}
+
+		@media  screen and (max-width: 991px) {
+			height: 940px;
+		}
+
+		@media  screen and (max-width: 768px) {
+			height: auto;
+		}
 	}
+
 }
  
 .container-title {
@@ -23,15 +39,28 @@
 	display: flex;
 	justify-content: center;
 
+	@media  screen and (max-width: 768px) {
+		flex-direction: column;
+		align-items: center;
+	}
+
 	&__col-one {
 		display: flex;
 		flex-direction: column;
-		flex-basis: 30%;
+		flex-basis: 40%;
 		padding-right: 40px;
+		@media  screen and (max-width: 991px) {
+			flex-basis: 50%;
+		}
+		@media  screen and (max-width: 768px) {
+			flex-basis: 100%;
+			padding-right: 0;
+			align-items: center;
+		}
 	}
 
 	&__text-one {
-		width: 539px;
+		width: 100%;
 		background: #fe960b;
 		border: 3px solid #5f2303;
 		border-radius: 50px;
@@ -39,10 +68,23 @@
 		@include bold;
 		color: #5f2303;
 		padding: 30px;
+		@media screen and (max-width: 1199px) {
+			padding: 20px;
+		}
+		@media  screen and (max-width: 991px) {
+			padding: 15px;
+		}
+		@media  screen and (max-width: 768px) {
+			width: 90%;
+		}
+		@media  screen and (max-width: 450px) {
+			padding: 12px;
+		}
 	}
 
 	&__text-two {
-		width: 565px;
+		margin-top: 90px;
+		width: 100%;
 		background: #fe960b;
 		border: 3px solid #5f2303;
 		border-radius: 50px;
@@ -50,27 +92,61 @@
 		@include bold;
 		color: #5f2303;
 		padding: 30px;
+		@media screen and (max-width: 1199px) {
+			padding: 20px;
+		}
+		@media  screen and (max-width: 991px) {
+			margin-top: 15px;
+			padding: 15px;
+		}
+		@media  screen and (max-width: 768px) {
+			width: 90%;
+		}
+		@media  screen and (max-width: 450px) {
+			padding: 10px;
+		}
 	}
 
 	&__bees {
 		width: 100%;
+		@media  screen and (max-width: 768px) {
+			width: 80%;
+		}
 	}
 
 	&__photo2 {
 		border: 4px solid black;
 		border-radius: 5px;
+		width: 100%;
+		@media  screen and (max-width: 768px) {
+			display: none;
+		}
 	}
 
 	&__photo1 {
 		border: 4px solid black;
 		border-radius: 5px;
-		width: 507px;
+		width: 100%;
+		@media screen and (max-width: 1199px) {
+			margin-top: 20px;
+		}
+		@media  screen and (max-width: 768px) {
+			display: none;
+		}
 	}
 
 	&__col-two {
 		display: flex;
 		flex-direction: column;
-		flex-basis: 30%;
-		justify-content: space-between;
+		flex-basis: 40%;
+		justify-content: center;
+		@media  screen and (max-width: 991px) {
+			flex-basis: 50%;
+
+		}
+		@media  screen and (max-width: 768px) {
+			width: 100%;
+			align-items: center;
+		}
 	}
 }
