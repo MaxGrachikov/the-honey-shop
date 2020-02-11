@@ -1,0 +1,65 @@
+.why-us {
+	background-color: #ff9400;
+}
+
+.wrapper-why-us {
+	display: flex;
+	justify-content: center;
+	
+	&__table {
+		background-image: url("../../../build/images/WhyWe/Plate.png");
+		 background-size: cover;
+		 width: 640px;
+		 height: 300px;
+		 margin: auto;
+		 display: flex;
+		 justify-content: center;
+		 align-items: center;
+		 padding-bottom: 30px;
+	}
+
+	&__title {
+		color: #fedb00;
+		padding-left: 40px;
+	}
+
+	&__col {
+		flex-basis: 40%;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+.arguments-block {
+	display: flex;
+	flex-direction: column;
+	&__top-row {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&__index {
+		width: 38px;
+		height: 38px;
+		border: 4px solid #ffdc00;
+		background-color: #500c00;
+		border-radius: 20px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: #ffdc00;
+		@include regular;
+	}
+
+	&__title {
+		flex-basis: 60%;
+		text-align: center;
+	}
+	&__text {
+		text-align: center;
+		@include regular;
+		font-size: 15pt;
+	}
+}

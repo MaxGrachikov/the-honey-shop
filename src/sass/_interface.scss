@@ -1,5 +1,5 @@
 .title {
-	@include regular;
+	@include bold;
 	font-size: 24pt;
 	@media screen and (max-width: 768px) {
 		font-size: 18pt;
