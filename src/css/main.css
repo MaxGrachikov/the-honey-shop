@@ -330,7 +330,7 @@ header {
   padding-top: 3%; }
   .why-us__table {
     margin-top: 67px;
-    background-image: url("../../../build/images/WhyWe/Plate.png");
+    background-image: url("../../build/images/WhyWe/Plate.png");
     background-size: cover;
     width: 640px;
     height: 300px;
@@ -341,13 +341,13 @@ header {
     padding-bottom: 30px; }
     @media screen and (max-width: 768px) {
       .why-us__table {
-        background-image: url("../../../build/images/WhyWe/tablets/Plate.png");
+        background-image: url("../../build/images/WhyWe/tablets/Plate.png");
         width: 429px;
         height: 183px;
         padding-bottom: 0px; } }
     @media screen and (max-width: 450px) {
       .why-us__table {
-        background-image: url("../../../build/images/WhyWe/mobile/Plate.png");
+        background-image: url("../../build/images/WhyWe/mobile/Plate.png");
         width: 271px;
         height: 117px;
         padding-bottom: 0px; } }
