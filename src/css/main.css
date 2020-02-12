@@ -326,12 +326,10 @@ header {
         align-items: center; } }
 
 .why-us {
-  background-color: #ff9400; }
-
-.wrapper-why-us {
-  display: flex;
-  justify-content: center; }
-  .wrapper-why-us__table {
+  background-color: #ff9400;
+  padding-top: 3%; }
+  .why-us__table {
+    margin-top: 67px;
     background-image: url("../../../build/images/WhyWe/Plate.png");
     background-size: cover;
     width: 640px;
@@ -341,15 +339,49 @@ header {
     justify-content: center;
     align-items: center;
     padding-bottom: 30px; }
-  .wrapper-why-us__title {
+    @media screen and (max-width: 768px) {
+      .why-us__table {
+        background-image: url("../../../build/images/WhyWe/tablets/Plate.png");
+        width: 429px;
+        height: 183px;
+        padding-bottom: 0px; } }
+    @media screen and (max-width: 450px) {
+      .why-us__table {
+        background-image: url("../../../build/images/WhyWe/mobile/Plate.png");
+        width: 271px;
+        height: 117px;
+        padding-bottom: 0px; } }
+    @media screen and (max-width: 273px) {
+      .why-us__table {
+        background-image: url("");
+        width: 100%;
+        height: auto;
+        padding-bottom: 0px; } }
+  .why-us__title {
     color: #fedb00;
-    padding-left: 40px; }
+    padding-left: 30px; }
+    @media screen and (max-width: 273px) {
+      .why-us__title {
+        color: #500c00; } }
+
+.wrapper-why-us {
+  display: flex;
+  justify-content: center; }
   .wrapper-why-us__col {
-    flex-basis: 40%;
+    flex-basis: 45%;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center; }
+    @media screen and (max-width: 1199px) {
+      .wrapper-why-us__col {
+        flex-basis: 60%; } }
+    @media screen and (max-width: 768px) {
+      .wrapper-why-us__col {
+        flex-basis: 90%; } }
+    @media screen and (max-width: 450px) {
+      .wrapper-why-us__col {
+        flex-basis: 100%; } }
 
 .arguments-block {
   display: flex;
@@ -369,10 +401,19 @@ header {
     align-items: center;
     color: #ffdc00;
     font-family: 'Segoe Print', sans-serif; }
+    @media screen and (max-width: 450px) {
+      .arguments-block__index {
+        width: 33px;
+        height: 33px; } }
   .arguments-block__title {
     flex-basis: 60%;
-    text-align: center; }
+    text-align: center;
+    color: #500c00; }
   .arguments-block__text {
     text-align: center;
     font-family: 'Segoe Print', sans-serif;
-    font-size: 15pt; }
+    font-size: 15pt;
+    color: #500c00; }
+    @media screen and (max-width: 450px) {
+      .arguments-block__text {
+        font-size: 14pt; } }
