@@ -1,11 +1,16 @@
-header {
+.header {
 	position: relative;
 	z-index: 1;
-	background-image: url("../../images/hat/Hat.png");
+	background-image: url("../../build/images/hat/Hat.png");
 	box-sizing: contain;
-	height: 600px;
-	@media screen and (max-width: 360px) {
-		height: auto;
+	height: 600px; 
+	@media screen and (max-width: 768px) {
+		background-image: url("../../build/images/hat/tablets/Hat.png");
+		height: 500px; 
+	}
+	@media screen and (max-width: 400px) {
+		background-image: url("../../build/images/hat/mobile/Hat.png");
+		height: 400px; 
 	}
 }
 
@@ -55,6 +60,7 @@ header {
 		width: 45px;
 		height: 35px;
 		border: 3px solid #691302;
+		background-color: #e38f21;
 		&:before, &:after {
 			content: '';
 			background-color: #691302;
@@ -83,7 +89,7 @@ header {
 		@media screen and (max-width: 768px) {
 			display: block;
 			z-index: 5;
-			background-color: #e38f21;
+			
 			border: 3px solid black;
 
 			&:after {
