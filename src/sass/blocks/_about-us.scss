@@ -66,8 +66,9 @@
 		border-radius: 50px;
 		text-align: center;
 		@include bold;
+		font-size: 14pt;
 		color: #5f2303;
-		padding: 30px;
+		padding: 15px;
 		@media screen and (max-width: 1199px) {
 			padding: 20px;
 		}
@@ -90,14 +91,15 @@
 		border-radius: 50px;
 		text-align: center;
 		@include bold;
+		font-size: 14pt;
 		color: #5f2303;
-		padding: 30px;
+		padding: 15px;
 		@media screen and (max-width: 1199px) {
-			padding: 20px;
+			padding: 5px;
 		}
 		@media  screen and (max-width: 991px) {
 			margin-top: 15px;
-			padding: 15px;
+			padding: 5px;
 		}
 		@media  screen and (max-width: 768px) {
 			width: 90%;
