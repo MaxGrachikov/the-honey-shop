@@ -1,14 +1,12 @@
 $(".header-wrapper__burger").click(function() {
 	$(".header-wrapper__burger,.menu").toggleClass("active");
+	$("body").toggleClass("lock");
+	$(this).toggleClass("mobile-menu");
+	// if ($(this).css("position") == "relative") {
+	// 	$(this).css("position","fixed");
+	// }
+	// else {
+	// 	$(this).css("position","relative");
+	// }
 });
 
-// Фикс меню для мобил
-$(".header-wrapper__burger").on("click", function() {
-	if($("header").css("position") == "relative") {
-		$("header").css("position", "static");
-	}
-	else {
-		$("header").css("position", "relative");
-	}
-
-})
