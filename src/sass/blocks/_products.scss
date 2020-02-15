@@ -116,7 +116,8 @@
 	}
 }
 
-.modal-wrapper {
+
+.modal {
 	position: fixed;
 	display:flex;
 	align-items:center;
@@ -129,9 +130,15 @@
 	display: none;
 }
 
+.modal-wrapper {
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	display: flex;
+}
+
 .feedback-form {
-	top: 300px;
-	left: 35%;
+	margin: auto;
 	width: 30%;
 	min-width: 495px; 
 	height: 400px;
@@ -181,6 +188,9 @@
 		border: 0px solid;
 		background: #fed22a;
 		width: 100%;
+		@media screen and (max-width: 266px) {
+			width: 95%;
+		}
 	}
 	
 	&__button-send-data,
@@ -221,6 +231,7 @@
 }
 
 .about-on-product {
+	margin: auto;
 	display: flex;
 	flex-direction: column;
 	width: 60%;
@@ -236,15 +247,18 @@
 	}
 	&__text {
 		margin: 0px 20px;
-		padding: 10px;
 		@include regular;
-		text-align: justify;
+		text-align: center;
 		color: #fed22a;
-		height: 200px;
-		overflow: auto;
-		border: 4px solid #fed22a;
+		height: 80%;
 		border-radius: 25px;
 		font-size: 15pt;
+		@media screen and (max-width: 768px) {
+			margin: 0px 10px;
+		}
+		@media screen and (max-width: 500px) {
+			margin: 0px 0px;
+		}
 	}
 	&__button-close {
 		border-radius: 50px;
@@ -257,6 +271,7 @@
 		transition: 1s;
 		margin: 10px 0px;
 		min-width: 143px;
+		min-height: 40px;
 		&:hover {
 			cursor: pointer;
 			background: #fed22a;
@@ -268,7 +283,7 @@
 	@media screen and (max-width: 991px) {
 		width: 80%;
 	}
-	@media screen and (max-width: 350px) {
+	@media screen and (max-width: 500px) {
 		width: 90%;
 	}
 }
