@@ -25,3 +25,9 @@ $(".product__button-more-detailed").click(function() {
 		$("body").css("overflow","");
 	})
 });
+
+
+$('.lightgallery').lightGallery({
+	thumbnail:true
+}); 
+

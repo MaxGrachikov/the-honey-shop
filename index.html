@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="build/css/main.css">
 	 <!-- bower:css -->
 	 <link rel="stylesheet" href="build/js/normalize.css/normalize.css" />
+	 <link rel="stylesheet" href="build/js/lightgallery/dist/css/lightgallery.css" />
 	 <!-- endbower -->
 </head>
 <body>
@@ -18,15 +19,17 @@
 						<span></span>
 					</div>
 					<nav class="menu">
-						<img src="build/images/hat/Logo.png" alt="logo" class="menu__logo">
-						<ul class="menu__ul">
-							<li class="menu__punkt"><a href="" class="menu__href">О нас</a></li>
-							<li class="menu__punkt"><a href="" class="menu__href">Почему мы?</a></li>
-							<li class="menu__punkt"><a href="" class="menu__href">Продукция</a></li>
-							<li class="menu__punkt"><a href="" class="menu__href">Галерея</a></li>
-							<li class="menu__punkt"><a href="" class="menu__href">Отзывы</a></li>
-							<li class="menu__punkt"><a href="" class="menu__href">Контакты</a></li>
-						</ul>
+						<div class="menu__wrapper">
+							<img src="build/images/hat/Logo.png" alt="logo" class="menu__logo">
+							<ul class="menu__ul">
+								<li class="menu__punkt"><a href="" class="menu__href">О нас</a></li>
+								<li class="menu__punkt"><a href="" class="menu__href">Почему мы?</a></li>
+								<li class="menu__punkt"><a href="" class="menu__href">Продукция</a></li>
+								<li class="menu__punkt"><a href="" class="menu__href">Галерея</a></li>
+								<li class="menu__punkt"><a href="" class="menu__href">Отзывы</a></li>
+								<li class="menu__punkt"><a href="" class="menu__href">Контакты</a></li>
+							</ul>
+						</div>
 					</nav>
 				</div>
 				<div class="header-wrapper__col-two">
@@ -124,9 +127,8 @@
 		<div class="background-darkening">
 			<div class="container">
 				<div class="products-wrapper">
-					
 					<div class="modal">
-						<div class="modal-wrapper">
+						<div class="modal__wrapper">
 							<div action="" class="feedback-form">
 									<h1 class="feedback-form__title">Оставьте ваши контактные данные:</h1>
 
@@ -335,11 +337,44 @@
 			</div>
 		</div>
 	</div>
-
+	
+	<div class="gallery">
+		<div class="gallery__background-cover">
+			<div class="container">
+				<div class="gallery-wrapper">
+					<h1 class="colorful-title">Галерея</h1>
+					<div class="lightgallery">
+						<a href="build/images/Gallery/Photo1.jpg" class="lightgallery__img"><img src="build/images/Gallery/im/Photo1.jpg" alt="Photo1" class="lightgallery__min-img"></a>
+						<a href="build/images/Gallery/Photo2.jpg" class="lightgallery__img"><img src="build/images/Gallery/im/Photo2.jpg" alt="Photo2" class="lightgallery__min-img"></a>
+						<a href="build/images/Gallery/Photo3.jpg" class="lightgallery__img"><img src="build/images/Gallery/im/Photo3.jpg" alt="Photo3" class="lightgallery__min-img"></a>
+						<a href="build/images/Gallery/Photo4.jpg" class="lightgallery__img"><img src="build/images/Gallery/im/Photo4.jpg" alt="Photo4" class="lightgallery__min-img"></a>
+						<a href="build/images/Gallery/Photo5.jpg" class="lightgallery__img"><img src="build/images/Gallery/im/Photo5.jpg" alt="Photo5" class="lightgallery__min-img"></a>
+						<a href="build/images/Gallery/Photo6.jpg" class="lightgallery__img"><img src="build/images/Gallery/im/Photo6.jpg" alt="Photo6" class="lightgallery__min-img"></a>
+						<a href="build/images/Gallery/Photo7.jpg" class="lightgallery__img"><img src="build/images/Gallery/im/Photo7.jpg" alt="Photo7" class="lightgallery__min-img"></a>
+						<a href="build/images/Gallery/Photo8.jpg" class="lightgallery__img"><img src="build/images/Gallery/im/Photo8.jpg" alt="Photo8" class="lightgallery__min-img"></a>
+						<a href="build/images/Gallery/Photo9.jpg" class="lightgallery__img"><img src="build/images/Gallery/im/Photo9.jpg" alt="Photo9" class="lightgallery__min-img"></a>
+						<a href="build/images/Gallery/Photo10.jpg" class="lightgallery__img"><img src="build/images/Gallery/im/Photo10.jpg" alt="Photo10" class="lightgallery__min-img"></a>
+						<a href="build/images/Gallery/Photo11.jpg" class="lightgallery__img"><img src="build/images/Gallery/im/Photo11.jpg" alt="Photo11" class="lightgallery__min-img"></a>
+						<a href="build/images/Gallery/Photo12.jpg" class="lightgallery__img"><img src="build/images/Gallery/im/Photo12.jpg" alt="Photo12" class="lightgallery__min-img"></a>
+						<a href="build/images/Gallery/Photo13.jpg" class="lightgallery__img"><img src="build/images/Gallery/im/Photo13.jpg" alt="Photo13" class="lightgallery__min-img"></a>
+						<a href="build/images/Gallery/Photo14.jpg" class="lightgallery__img"><img src="build/images/Gallery/im/Photo14.jpg" alt="Photo14" class="lightgallery__min-img"></a>
+						<a href="build/images/Gallery/Photo15.jpg" class="lightgallery__img"><img src="build/images/Gallery/im/Photo15.jpg" alt="Photo15" class="lightgallery__min-img"></a>
+						<a href="build/images/Gallery/Photo16.jpg" class="lightgallery__img"><img src="build/images/Gallery/im/Photo16.jpg" alt="Photo16" class="lightgallery__min-img"></a>
+						<a href="build/images/Gallery/Photo17.jpg" class="lightgallery__img"><img src="build/images/Gallery/im/Photo17.jpg" alt="Photo17" class="lightgallery__min-img"></a>
+						<a href="build/images/Gallery/Photo18.jpg" class="lightgallery__img"><img src="build/images/Gallery/im/Photo18.jpg" alt="Photo18" class="lightgallery__min-img"></a>
+						<a href="build/images/Gallery/Photo19.jpg" class="lightgallery__img"><img src="build/images/Gallery/im/Photo19.jpg" alt="Photo19" class="lightgallery__min-img"></a>
+						<a href="build/images/Gallery/Photo20.jpg" class="lightgallery__img"><img src="build/images/Gallery/im/Photo20.jpg" alt="Photo20" class="lightgallery__min-img"></a>
+						<a href="build/images/Gallery/Photo21.jpg" class="lightgallery__img"><img src="build/images/Gallery/im/Photo21.jpg" alt="Photo21" class="lightgallery__min-img"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	
 	
   <!-- bower:js -->
   <script src="build/js/jquery/dist/jquery.js"></script>
+  <script src="build/js/lightgallery/dist/js/lightgallery.min.js"></script>
   <!-- endbower -->
 
   <script src="build/js/main.js"></script>

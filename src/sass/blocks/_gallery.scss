@@ -1,0 +1,40 @@
+.gallery {
+	background-image: url("../../build/images/Gallery/background.jpg");
+	width: 100%;
+	height: auto;
+	border-bottom: 15px solid #833f1b;
+	&__background-cover {
+		background: rgba(254, 164, 8, 0.65);
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.gallery-wrapper {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	padding-top: 30px;
+}
+
+.lightgallery {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	padding-top: 30px;
+	&__img {
+		display: flex;
+		justify-content: center;
+		flex-basis: 25.333%;
+		margin: 10px 30px;
+		@media screen and (max-width: 335px) {
+			margin: 10px 0px;
+			max-width: 70%;
+		}
+	}
+	&__min-img {
+		padding: 0px;
+		margin: 0px;
+		border: 4px solid #fed22a;
+	}
+}
