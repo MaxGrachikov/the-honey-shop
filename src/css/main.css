@@ -722,3 +722,104 @@ body.lock {
     padding: 0px;
     margin: 0px;
     border: 4px solid #fed22a; }
+
+.reviews {
+  background-image: url("../../build/images/Reviews/background.jpg");
+  height: 1198px; }
+  .reviews__background-cover {
+    padding-top: 43px;
+    background: rgba(250, 196, 86, 0.7);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column; }
+
+.reviews-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%; }
+
+.light-slider__slide {
+  display: flex;
+  justify-content: center; }
+  @media screen and (max-width: 991px) {
+    .light-slider__slide {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; } }
+
+.light-slider__text {
+  flex-basis: 60%;
+  margin-left: 5%; }
+  @media screen and (max-width: 991px) {
+    .light-slider__text {
+      margin-left: 0;
+      flex-basis: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center; } }
+
+.light-slider__container-photo-client {
+  flex-bais: 20%;
+  text-align: center; }
+  @media screen and (max-width: 991px) {
+    .light-slider__container-photo-client {
+      width: 50%; } }
+
+.light-slider__photo-client {
+  border-radius: 100%;
+  border: 4px solid #833f1b;
+  width: 90%;
+  height: auto; }
+  @media screen and (max-width: 991px) {
+    .light-slider__photo-client {
+      width: 80%; } }
+
+.light-slider__feedback {
+  background: #fed22a;
+  border: 4px solid #833f1b;
+  border-radius: 35px;
+  color: #833f1b;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-family: 'Segoe Print', sans-serif;
+  font-size: 17pt;
+  width: 80%; }
+  @media screen and (max-width: 1199px) {
+    .light-slider__feedback {
+      width: 90%; } }
+  @media screen and (max-width: 768px) {
+    .light-slider__feedback {
+      font-size: 14pt; } }
+  @media screen and (max-width: 500px) {
+    .light-slider__feedback {
+      width: 95%; } }
+
+.light-slider__name-client {
+  background: #fed22a;
+  border: 4px solid #833f1b;
+  border-radius: 35px;
+  color: #833f1b;
+  display: flex;
+  text-align: left;
+  justify-content: center;
+  font-family: 'Segoe Print', sans-serif;
+  font-weight: normal;
+  font-size: 17pt;
+  width: 50%;
+  margin-top: 30px;
+  text-align: center; }
+  @media screen and (max-width: 1199px) {
+    .light-slider__name-client {
+      width: 60%; } }
+  @media screen and (max-width: 768px) {
+    .light-slider__name-client {
+      font-size: 14pt; } }
+  @media screen and (max-width: 500px) {
+    .light-slider__name-client {
+      width: 80%; } }
+
+.light-slider, .lightSlider, .lSSlide, .lsGrab {
+  height: auto; }

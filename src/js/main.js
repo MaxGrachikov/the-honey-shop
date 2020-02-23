@@ -29,5 +29,12 @@ $(".product__button-more-detailed").click(function() {
 
 $('.lightgallery').lightGallery({
 	thumbnail:true
-}); 
+});
 
+$(document).ready(function() {
+    $(".light-slider").lightSlider({
+    	item: 1,
+    	auto: false,
+    	controls: false,
+    }); 
+});

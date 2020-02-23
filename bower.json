@@ -15,6 +15,7 @@
   "dependencies": {
     "normalize.css": "^8.0.1",
     "jquery": "^3.4.1",
-    "lightgallery": "^1.6.12"
+    "lightgallery": "^1.6.12",
+    "lightslider": "^1.1.6"
   }
 }
