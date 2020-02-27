@@ -731,6 +731,9 @@ body.lock {
 .reviews {
   background-image: url("../../build/images/Reviews/background.jpg");
   height: 1198px; }
+  @media screen and (max-width: 991px) {
+    .reviews {
+      height: auto; } }
   .reviews__background-cover {
     padding-top: 43px;
     background: rgba(250, 196, 86, 0.7);
@@ -740,6 +743,7 @@ body.lock {
     flex-direction: column; }
 
 .reviews-wrapper {
+  padding-top: 10%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -779,7 +783,7 @@ body.lock {
   height: auto; }
   @media screen and (max-width: 991px) {
     .light-slider__photo-client {
-      width: 80%; } }
+      width: 100%; } }
 
 .light-slider__feedback {
   background: #fed22a;
@@ -825,6 +829,3 @@ body.lock {
   @media screen and (max-width: 500px) {
     .light-slider__name-client {
       width: 80%; } }
-
-.light-slider, .lightSlider, .lSSlide, .lsGrab {
-  height: auto; }
