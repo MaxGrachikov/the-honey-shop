@@ -36,5 +36,6 @@ $(document).ready(function() {
     	item: 1,
     	auto: false,
     	controls: false,
+    	adaptiveHeight: true
     }); 
 });

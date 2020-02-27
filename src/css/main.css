@@ -712,12 +712,17 @@ body.lock {
   .lightgallery__img {
     display: flex;
     justify-content: center;
-    flex-basis: 25.333%;
-    margin: 10px 30px; }
-    @media screen and (max-width: 335px) {
+    margin: 10px 30px;
+    width: 25.3333%; }
+    @media screen and (max-width: 991px) {
       .lightgallery__img {
-        margin: 10px 0px;
-        max-width: 70%; } }
+        width: 42%; } }
+    @media screen and (max-width: 768px) {
+      .lightgallery__img {
+        width: 39%; } }
+    @media screen and (max-width: 550px) {
+      .lightgallery__img {
+        width: 100%; } }
   .lightgallery__min-img {
     padding: 0px;
     margin: 0px;
