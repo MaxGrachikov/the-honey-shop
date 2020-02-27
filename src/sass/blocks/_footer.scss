@@ -1,0 +1,28 @@
+.footer {
+	background-image: url("../../build/images/Footer/background.png");
+	width: 100%;
+	z-index: 20;
+	margin-top: -10%;
+	padding-top: 10%;
+	height: auto;
+	&__top {
+		display: flex;
+		justify-content: center;
+	}
+	&__bottom {
+		padding-top: 61px;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&__icon {
+		width: 33%;
+		@media screen and(max-width: 768px) {
+			width: 100%;
+		}
+	}
+}
+
+.footer-wrapper {
+	display: flex;
+	flex-direction: column;
+}

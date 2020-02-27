@@ -258,3 +258,37 @@
 		}
 	}
 }
+
+.item-icon {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	&__title {
+		color: #500c00;
+		@include bold;
+		font-size: 24px;
+		font-weight: 700;
+		text-align: center;
+		a {
+			text-decoration: none;
+			color: #500c00;
+			@include bold;
+			font-size: 24px;
+			font-weight: 700;
+			text-align: center;
+		}
+	}
+	&__subtitle {
+		color: #500c00;
+		@include bold;
+		font-size: 18px;
+		font-weight: 400;
+		text-align: center;
+	}
+	&__images {
+		@media screen and(max-width: 768px) {
+			display: none;
+		}
+	}
+}
