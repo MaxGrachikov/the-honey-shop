@@ -1,0 +1,40 @@
+{
+  "name": "lg-fullscreen",
+  "version": "1.1.0",
+  "description": "Fullscreen module for lightgallery.",
+  "main": [
+    "dist/lg-fullscreen.min.js"
+  ],
+  "keywords": [
+    "gallery",
+    "lightbox",
+    "image",
+    "youtube",
+    "vimeo"
+  ],
+  "authors": [
+    "Sachin N <sachi77n@gmail.com>"
+  ],
+  "homepage": "http://sachinchoolur.github.io/lightGallery/",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sachinchoolur/lg-fullscreen.git"
+  },
+  "dependencies": {
+    "jquery": ">=1.7.0"
+  },
+  "license": "GPLv3",
+  "ignore": [
+    "README.md"
+  ],
+  "_release": "1.1.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.1.0",
+    "commit": "23f3685f3559eb2b0bac0004dd44d514d0b4dafe"
+  },
+  "_source": "https://github.com/sachinchoolur/lg-fullscreen.git",
+  "_target": "^1.1.0",
+  "_originalSource": "lg-fullscreen",
+  "_direct": true
+}
