@@ -67,8 +67,10 @@ function compilationCss() {
 };
 
 function optimizationImages() {
-	return gulp.src('./src/images/*')
-        .pipe(imagemin())
+	return gulp.src('./src/images/**')
+        .pipe(imagemin({
+            progressive: true
+        }))
         .pipe(gulp.dest('./build/images/'))
         .pipe(browserSync.stream());
 };
@@ -81,14 +83,15 @@ function compilationJS() {
     	.pipe(browserSync.stream());
 };
 
-function clean() {
-	return del(['./build/*']);
+
+function cleanImages() {
+    return del(['./build/images/**']);
 };
 
-function start() {
+function watch() {
 	gulp.watch('./src/sass/**/*.scss', compilationSass);
 	gulp.watch('./src/css/**/*.css', compilationCss);
-	gulp.watch('./src/images/**/*.*', optimizationImages);
+	gulp.watch('./src/images/**', optimizationImages);
 	gulp.watch('./src/js/**/*.js', compilationJS);
     gulp.watch("./*.pug", compilationHTML);
 	gulp.watch("./*.html").on('change', browserSync.reload);
@@ -99,7 +102,5 @@ function start() {
 	});
 };
 
-gulp.task('build', gulp.series(clean, gulp.parallel(compilationSass, compilationCss, optimizationImages, compilationJS))); // таска перед продакшеном
-gulp.task('clean', clean); // таска для очистки папки build
 
-gulp.task('start', start); // таска для разработки
+gulp.task('start', gulp.series(cleanImages, gulp.parallel(compilationSass, compilationCss, optimizationImages, compilationJS), watch)); // таска для разработки
