@@ -17,9 +17,8 @@ const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const babel = require('gulp-babel');
 const wiredep = require('gulp-wiredep');
+const terser = require('gulp-terser');
 
-/*Подключаемые модули для работы с html файлами*/
-const pug = require('gulp-pug');
 
 
 
@@ -31,30 +30,30 @@ const jsFiles = [
 	'./src/js/**/*.js'
 ]; // список и порядок подключаемых модулей js
 
-gulp.task('bower', function () {
+gulp.task('bower', () => {
   return gulp.src('index.html')
     .pipe(wiredep({
       directory: 'build/js'
     }))
     .pipe(gulp.dest('./'))
-})
+});
 
-function compilationHTML() {
+gulp.task('compilationHTML', () => {
     return gulp.src('./*.pug')
   .pipe(pug({
     pretty:true
   }))
   .pipe(gulp.dest('./'))
-}
+});
 
-function compilationSass() {
+gulp.task('compilationSass', () => {
 	return gulp.src('./src/sass/**/*.scss')
     	.pipe(sass().on('error', sass.logError))
     	.pipe(gulp.dest('./src/css'))
     	.pipe(browserSync.stream());
-};
+});
 
-function compilationCss() {
+gulp.task('compilationCss', () => {
 	return gulp.src(cssFiles)
     	.pipe(concatCss("main.css"))
     	.pipe(autoprefixer({
@@ -64,43 +63,44 @@ function compilationCss() {
         .pipe(cleanCSS({level: 2}))
     	.pipe(gulp.dest('./build/css/'))
     	.pipe(browserSync.stream());
-};
+});
 
-function optimizationImages() {
+gulp.task('optimizationImages', () => {
 	return gulp.src('./src/images/**')
         .pipe(imagemin({
             progressive: true
         }))
         .pipe(gulp.dest('./build/images/'))
         .pipe(browserSync.stream());
-};
+});
 
-function compilationJS() {
+gulp.task('compilationJS', () => {
 	return gulp.src(jsFiles)
     	.pipe(concat('main.js'))
-    	.pipe(uglify())
+        .pipe(babel())
+        .pipe(terser())
     	.pipe(gulp.dest('./build/js'))
     	.pipe(browserSync.stream());
-};
+});
 
 
-function cleanImages() {
-    return del(['./build/images/**']);
-};
+gulp.task('cleanBuild', () => {
+    return del(['./build/images/**', './build/css/main.css', './build/js/main.js']);
+});
 
-function watch() {
-	gulp.watch('./src/sass/**/*.scss', compilationSass);
-	gulp.watch('./src/css/**/*.css', compilationCss);
-	gulp.watch('./src/images/**', optimizationImages);
-	gulp.watch('./src/js/**/*.js', compilationJS);
-    gulp.watch("./*.pug", compilationHTML);
+gulp.task('watch', () => {
+	gulp.watch('./src/sass/**/*.scss', gulp.series('compilationSass'));
+	gulp.watch('./src/css/**/*.css', gulp.series('compilationCss'));
+	gulp.watch('./src/images/**', gulp.series('optimizationImages'));
+	gulp.watch('./src/js/**/*.js', gulp.series('compilationJS'));
 	gulp.watch("./*.html").on('change', browserSync.reload);
 	browserSync.init({
 	    server: {
 	        baseDir: "./"
 	    }
 	});
-};
+});
 
 
-gulp.task('start', gulp.series(cleanImages, gulp.parallel(compilationSass, compilationCss, optimizationImages, compilationJS), watch)); // таска для разработки
+gulp.task('default', gulp.series('cleanBuild', 'compilationSass', 'compilationCss', 'optimizationImages', 'compilationJS', 'watch')); // таска для разработки
+gulp.task('build', gulp.series('cleanBuild', 'compilationSass', 'compilationCss', 'optimizationImages', 'compilationJS')); // таска для сборки

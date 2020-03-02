@@ -39,3 +39,5 @@ $(document).ready(function() {
     	adaptiveHeight: true
     }); 
 });
+
+let x = 10;
