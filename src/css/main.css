@@ -751,6 +751,9 @@ body.lock {
     @media screen and (max-width: 550px) {
       .lightgallery__img {
         width: 100%; } }
+    @media screen and (max-width: 320px) {
+      .lightgallery__img {
+        width: 90%; } }
   .lightgallery__min-img {
     padding: 0px;
     margin: 0px;

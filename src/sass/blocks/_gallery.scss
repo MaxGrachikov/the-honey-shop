@@ -36,6 +36,9 @@
 		@media screen and (max-width: 550px) {
 			width: 100%;
 		}
+		@media screen and (max-width: 320px) {
+			width: 90%;
+		}
 	}
 	&__min-img {
 		padding: 0px;
