@@ -28,16 +28,18 @@ $(".product__button-more-detailed").click(function() {
 
 
 $('.lightgallery').lightGallery({
-	thumbnail:true
+	thumbnail: true
 });
 
 $(document).ready(function() {
     $(".light-slider").lightSlider({
     	item: 1,
     	auto: false,
-    	controls: false,
-    	adaptiveHeight: true
+    	controls: true,
+    	adaptiveHeight: true,
+    	pager: true,
+    	prevHtml: '<div class="nextSlide">&#8249;</div>',
+    	nextHtml: '<div class="nextSlide">&#8250;</div>',
     }); 
 });
 
-let x = 10;
