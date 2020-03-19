@@ -287,17 +287,21 @@
 		font-size: 18px;
 		font-weight: 400;
 		text-align: center;
+		text-decoration: none;
 	}
 	&__images {
+		@media screen and(max-width: 768px) {
+			display: none;
+		}
+	}
+
+	&__images_turn {
 		-webkit-transition: -webkit-transform .8s ease-in-out;
         transition: transform .8s ease-in-out;
         &:hover {
   		  -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
         }
-		@media screen and(max-width: 768px) {
-			display: none;
-		}
 	}
 }
 

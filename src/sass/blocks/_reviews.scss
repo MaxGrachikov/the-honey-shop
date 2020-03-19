@@ -17,10 +17,14 @@
 
 .reviews-wrapper {
 	padding-top: 10%;
+	padding-bottom: 10%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	height: 100%;
+	@media screen and (max-width: 470px) {
+		padding-bottom: 22%;
+	}
 }
 
 .light-slider {
