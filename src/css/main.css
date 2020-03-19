@@ -279,9 +279,15 @@
     font-size: 18px;
     font-weight: 400;
     text-align: center; }
-  @media screen and (max-width: 768px) {
-    .item-icon__images {
-      display: none; } }
+  .item-icon__images {
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    transition: transform .8s ease-in-out; }
+    .item-icon__images:hover {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg); }
+    @media screen and (max-width: 768px) {
+      .item-icon__images {
+        display: none; } }
 
 .nextSlide {
   font-size: 120px;
@@ -893,7 +899,8 @@ body.lock {
     display: flex;
     flex-wrap: wrap; }
   .footer__icon {
-    width: 33%; }
+    width: 33%;
+    border-radius: 50%; }
     @media screen and (max-width: 768px) {
       .footer__icon {
         width: 100%; } }
