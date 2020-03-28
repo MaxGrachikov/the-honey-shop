@@ -7,7 +7,7 @@
         url('../../fonts/SegoePrint-Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
-}
+} 
 
 @font-face {
     font-family: 'Segoe Print';
@@ -26,4 +26,4 @@
 
 @mixin bold {
     font-family: 'Segoe Print Bold', sans-serif;
-}
+} 

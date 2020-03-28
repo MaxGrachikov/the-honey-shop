@@ -57,8 +57,8 @@ gulp.task('compilationCss', () => {
 	return gulp.src(cssFiles)
     	.pipe(concatCss("main.css"))
     	.pipe(autoprefixer({
-            overrideBrowserslist: ['> 0.1%'],
-            cascade: false
+            overrideBrowserslist: ['last 25 versions'],
+            cascade: true
         }))
         .pipe(cleanCSS({level: 2}))
     	.pipe(gulp.dest('./build/css/'))

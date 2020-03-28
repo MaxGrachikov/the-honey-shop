@@ -12,11 +12,14 @@
 		background-image: url("../../build/images/hat/mobile/Hat.png");
 		height: 400px; 
 	}
-}
+} 
 
 .header-wrapper {
 	display: flex;
 	justify-content: center;
+	@media screen and (max-width: 768px) {
+		flex-direction: row-reverse;
+	}
 	&__col-one {
 		display: flex;
 		justify-content: center;
@@ -27,7 +30,7 @@
 		@media screen and (max-width: 768px) {
 			height: 80px;
 		}
-
+ 
 	}
 
 	&__col-two {
@@ -89,7 +92,6 @@
 		@media screen and (max-width: 768px) {
 			display: block;
 			z-index: 5;
-			
 			border: 3px solid black;
 
 			&:after {
@@ -110,7 +112,7 @@
 
 	&__burger.mobile-menu {
 		position: fixed;
-		left: 7px;
+		right: 7px;
 		top: 7px;
 	}
 
@@ -179,14 +181,15 @@
 		flex-direction: column;
 	}
 	@media  screen and (max-width: 768px) {
+		display: none;
 		position: absolute;
 		top: -10000000%;
-	}
-	
+	}	
 }
+
 .menu.active {
-	width: 100%;
-	height: 100%;
+	width:100vw;
+	height:100vh;
 	background-color: #691302;
 	position: fixed;
 	left: 0px;
@@ -214,12 +217,11 @@
 		}
 
 		&__wrapper {
-			justify-content: center;
-			align-items: center;
 			height: 100%;
-			width: 80%;
-			overflow: auto;
-		}
+			width: 75%;
+			overflow-x: hidden;
+			overflow-y: auto;
+			display: flex;		}
 	}
 }
 

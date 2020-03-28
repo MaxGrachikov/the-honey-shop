@@ -11,7 +11,7 @@
 		 margin: auto;
 		 display: flex;
 		 justify-content: center;
-		 align-items: center;
+		 align-items: center; 
 		 padding-bottom: 30px;
 		 @media screen and (max-width: 768px) {
 			background-image: url("../../build/images/WhyWe/tablets/Plate.png");
@@ -32,7 +32,7 @@
 		 	height: auto;
 		 	padding-bottom: 0px;
 		}
-	}
+	} 
 
 	&__title {
 		color: #fedb00;

@@ -26,7 +26,6 @@ $(".product__button-more-detailed").click(function() {
 	})
 });
 
-
 $('.lightgallery').lightGallery({
 	thumbnail: true
 });
@@ -43,3 +42,13 @@ $(document).ready(function() {
     }); 
 });
 
+$(function(){
+	$("a[href^='.']").click(function(){
+    	var _href = $(this).attr("href");
+    	$(".header-wrapper__burger,.menu").toggleClass("active");
+		$("body").toggleClass("lock");
+		$(".header-wrapper__burger").toggleClass("mobile-menu"); //скрипт для работы бургер меню
+        $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+        return false;
+    });
+});
