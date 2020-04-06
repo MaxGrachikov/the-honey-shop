@@ -2,6 +2,9 @@
 	box-sizing: border-box;
 }
 
+ 
+@import "blocks/mobile-menu"; // настройки мобильного меню
+
 @import "grid"; // настройка сетки
 
 @import "fonts"; // Настройка шрифтов

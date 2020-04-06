@@ -37,6 +37,7 @@
 	width:100vw;
 	height:100vh;
 	background-color: rgba(255, 148, 0, 0.7);
+	z-index: 100;
 	display: none;
 	&__wrapper {
 		height: 100%;
@@ -50,7 +51,7 @@
 	margin: auto;
 	width: 30%;
 	min-width: 495px; 
-	height: 400px;
+	height: auto;
 	border-radius: 25px;
 	border: 7px solid #fed22a;
 	background: #833f1b;
@@ -59,9 +60,10 @@
 	align-items: center;
 	justify-content: center;
 	display: none;
+	padding: 0px 0px 20px 0px;
 	@media screen and (max-width: 991px) {
 		min-width: 288px;
-		height: 450px;
+		height: auto;
 	}
 	@media screen and (max-width: 318px) {
 		font-size: 12pt;
@@ -137,6 +139,9 @@
 			align-items: center;
 		}
 	}
+	input {
+		max-height: 20px;
+	}
 }
 
 .about-on-product {
@@ -193,7 +198,7 @@
 		width: 80%;
 	}
 	@media screen and (max-width: 500px) {
-		width: 90%;
+		width: 100%;
 	}
 }
 

@@ -6,11 +6,13 @@
 	height: 600px; 
 	@media screen and (max-width: 768px) {
 		background-image: url("../../build/images/hat/tablets/Hat.png");
-		height: 500px; 
+		background-repeat: no-repeat;
+		height: 550px;
+		padding: 50px 0px 00px 0px; 
 	}
 	@media screen and (max-width: 400px) {
 		background-image: url("../../build/images/hat/mobile/Hat.png");
-		height: 400px; 
+		height: 450px; 
 	}
 } 
 
@@ -55,92 +57,9 @@
 		margin: auto;
 		max-width: 80%;
 	}
-
-	&__burger {
-		display: none;
-		position: relative;
-		border-radius: 10px;
-		width: 45px;
-		height: 35px;
-		border: 3px solid #691302;
-		background-color: #e38f21;
-		&:before, &:after {
-			content: '';
-			background-color: #691302;
-			height: 3px;
-			width: 80%;
-			position: absolute;
-			transition: all 0.3s ease 0s;
-		}
-		span {
-			background-color: #691302;
-			height: 3px;
-			width: 80%;
-			position: absolute;
-			left: 10%;
-			top: 13px;
-		}
-		&:after {
-			top: 5px;
-			left: 10%;
-		}
-
-		&:before {
-			bottom: 5px;
-			left: 10%;
-		}
-		@media screen and (max-width: 768px) {
-			display: block;
-			z-index: 5;
-			border: 3px solid black;
-
-			&:after {
-				top: 5px;
-				left: 10%;
-			}
-
-			&:before {
-				bottom: 5px;
-				left: 10%;
-			}
-		}
-
-		@media screen and (max-width: 414px) {
-			width: 35px;
-		}
-	}
-
-	&__burger.mobile-menu {
-		position: fixed;
-		right: 7px;
-		top: 7px;
-	}
-
-	&__burger.active {
-		background-color: #833f1b;
-
-		&:after {
-			transform: rotate(-45deg);
-			top: 12px;
-			background-color: #ffee52;
-		}
-
-		&:before {
-			transform: rotate(45deg);
-			bottom: 13px;
-			background-color: #ffee52;
-		}
-
-		span {
-			display: none;
-		}
-	}
-
 }
 
 .menu {
-	margin: 0px;
-	padding: 0px;
 	padding-top: 10%;
 	&__logo {
 		margin-right: 8px;
@@ -185,46 +104,4 @@
 		position: absolute;
 		top: -10000000%;
 	}	
-}
-
-.menu.active {
-	width:100vw;
-	height:100vh;
-	background-color: #691302;
-	position: fixed;
-	left: 0px;
-	top: 0px;
-	padding-top: 0px;
-	z-index: 4;
-	display: flex;
-	justify-content: center;
-	.menu {
-		&__logo {
-			display: none;
-		}
-
-		&__ul {
-			width: 100%;
-			height: 500px;
-			padding: 0px;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-		}
-		&__href {
-			width: 80%;
-			margin: auto;
-		}
-
-		&__wrapper {
-			height: 100%;
-			width: 75%;
-			overflow-x: hidden;
-			overflow-y: auto;
-			display: flex;		}
-	}
-}
-
-body.lock {
-	overflow: hidden;
 }
