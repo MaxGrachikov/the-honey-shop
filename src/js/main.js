@@ -12,23 +12,29 @@ $(document).ready(function() { // скрипт для работы бургер 
 });
 
 $(".product__button-buy").click(function() { // функция кнопки открытия формы обратной связи
-	$(".modal").css("display", "flex");
+	$(".modal").css("top","0");
+	$(".about-on-product").css("display", "none"); // убираем окно о продукте
 	$(".feedback-form").css("display", "flex");
 	lockBody();
 	$(".feedback-form__button-close-form").click(function() {
-		$(".feedback-form").css("display", "none");
-		$(".modal").css("display", "none");
+		$(".modal").css("top","-100%"); 
+		setTimeout(function() {
+			if ($(".modal").css("top") == "-100%")  $(".feedback-form").css("display", "none");
+		}, 100);
 		unlockBody();
 	})
 });
 
 $(".product__button-more-detailed").click(function() { // функция кнопки открытия формы о продукте
-	$(".modal").css("display", "flex");
-	$(".about-on-product").css("display", "flex");
+	$(".modal").css("top","0");
+	$(".feedback-form").css("display", "none"); // убираем форму обратной связи
+	$(".about-on-product").css("display", "flex"); 
 	lockBody();
 	$(".about-on-product__button-close").click(function() {
-		$(".about-on-product").css("display", "none");
-		$(".modal").css("display", "none");
+		$(".modal").css("top","-100%");
+		setTimeout(function() {
+			if ($(".modal").css("top") == "-100%") $(".about-on-product").css("display", "none");
+		}, 100);
 		unlockBody();
 	})
 });
@@ -67,6 +73,10 @@ $(function(){ // скрипт для работы плавных якорей
 });
 
 
-$(window).resize(function(){ // костыль для правильного отображения модальных окно под Safari
-	$(".modal").height($(window).height());
-});
+
+
+if (/iPhone/i.test(navigator.userAgent)) { // костыль для правильного отображения модальных окно под Iphone с учётом панели
+	$(window).resize(function(){
+		$(".modal").height($(window).height());
+	});
+}

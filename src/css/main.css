@@ -12,7 +12,8 @@
     display: flex;
     position: fixed;
     width: 100%;
-    top: 0px; }
+    top: 0px;
+    z-index: 100; }
     .mobile-menu:before {
       content: '';
       position: absolute;
@@ -156,13 +157,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  top: 0px;
+  top: -100000%;
   left: 0px;
   width: 100vw;
   height: 100vh;
   background-color: rgba(255, 148, 0, 0.7);
-  z-index: 100;
-  display: none; }
+  z-index: 100000;
+  transition: all 0.5s ease 0s; }
   .modal__wrapper {
     height: 100%;
     overflow-x: hidden;
@@ -181,8 +182,8 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  display: none;
-  padding: 0px 0px 20px 0px; }
+  padding: 0px 0px 20px 0px;
+  display: none; }
   @media screen and (max-width: 991px) {
     .feedback-form {
       min-width: 288px;
@@ -496,6 +497,9 @@
     background-image: url("../../build/images/AboutUs/Background.jpg");
     background-size: cover;
     height: auto; }
+    @media screen and (min-width: 800px) {
+      .main__background-image {
+        background-attachment: fixed; } }
     @media screen and (min-width: 1167px) {
       .main__background-image {
         height: 1070px; } }
@@ -794,7 +798,11 @@
 
 .reviews {
   background-image: url("../../build/images/Reviews/background.jpg");
+  background-size: cover;
   height: 1198px; }
+  @media screen and (min-width: 800px) {
+    .reviews {
+      background-attachment: fixed; } }
   @media screen and (max-width: 991px) {
     .reviews {
       height: auto; } }

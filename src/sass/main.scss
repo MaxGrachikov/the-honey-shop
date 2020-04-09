@@ -2,7 +2,11 @@
 	box-sizing: border-box;
 }
 
- 
+ body {
+	// padding-left: env(safe-area-inset-left, 5px);
+ }
+
+
 @import "blocks/mobile-menu"; // настройки мобильного меню
 
 @import "grid"; // настройка сетки
