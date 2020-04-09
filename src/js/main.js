@@ -1,3 +1,4 @@
+
 $(document).ready(function() { // скрипт для работы бургер меню
 	$(".mobile-menu__burger").click(function() {
 	if($(".mobile-menu__burger,.mobile-menu__menu").hasClass("active")) { // если меню находится в открытом состоянии
@@ -15,13 +16,13 @@ $(".product__button-buy").click(function() { // функция кнопки от
 	$(".modal").css("top","0");
 	$(".about-on-product").css("display", "none"); // убираем окно о продукте
 	$(".feedback-form").css("display", "flex");
-	lockBody();
+	lockBody(); // функция блокирование окна
 	$(".feedback-form__button-close-form").click(function() {
-		$(".modal").css("top","-100%"); 
+		$(".modal").css("top","-150%"); 
 		setTimeout(function() {
-			if ($(".modal").css("top") == "-100%")  $(".feedback-form").css("display", "none");
+			if ($(".modal").css("top") == "-150")  $(".feedback-form").css("display", "none");
 		}, 100);
-		unlockBody();
+		unlockBody(); // функция разблокирование окна
 	})
 });
 
@@ -29,13 +30,13 @@ $(".product__button-more-detailed").click(function() { // функция кно�
 	$(".modal").css("top","0");
 	$(".feedback-form").css("display", "none"); // убираем форму обратной связи
 	$(".about-on-product").css("display", "flex"); 
-	lockBody();
+	lockBody(); // функция блокирование окна
 	$(".about-on-product__button-close").click(function() {
-		$(".modal").css("top","-100%");
+		$(".modal").css("top","-150%");
 		setTimeout(function() {
-			if ($(".modal").css("top") == "-100%") $(".about-on-product").css("display", "none");
+			if ($(".modal").css("top") == "-150%") $(".about-on-product").css("display", "none");
 		}, 100);
-		unlockBody();
+		unlockBody(); // функция разблокирование окна
 	})
 });
 
@@ -73,10 +74,9 @@ $(function(){ // скрипт для работы плавных якорей
 });
 
 
-
-
 if (/iPhone/i.test(navigator.userAgent)) { // костыль для правильного отображения модальных окно под Iphone с учётом панели
 	$(window).resize(function(){
 		$(".modal").height($(window).height());
 	});
 }
+

@@ -157,7 +157,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  top: -100000%;
+  top: -150%;
   left: 0px;
   width: 100vw;
   height: 100vh;
@@ -390,10 +390,16 @@
 .nextSlide {
   font-size: 120px;
   color: #833f1b; }
+  @media screen and (max-width: 1000px) {
+    .nextSlide {
+      display: none; } }
 
 .prevSlide {
   font-size: 120px;
   color: #833f1b; }
+  @media screen and (max-width: 1000px) {
+    .prevSlide {
+      display: none; } }
 
 .header {
   position: relative;
@@ -497,7 +503,7 @@
     background-image: url("../../build/images/AboutUs/Background.jpg");
     background-size: cover;
     height: auto; }
-    @media screen and (min-width: 800px) {
+    @media screen and (min-width: 1000px) {
       .main__background-image {
         background-attachment: fixed; } }
     @media screen and (min-width: 1167px) {
@@ -800,7 +806,7 @@
   background-image: url("../../build/images/Reviews/background.jpg");
   background-size: cover;
   height: 1198px; }
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: 1000px) {
     .reviews {
       background-attachment: fixed; } }
   @media screen and (max-width: 991px) {
@@ -836,7 +842,7 @@
       align-items: center; } }
 
 .light-slider__text {
-  flex-basis: 70%;
+  flex-basis: 80%;
   margin-left: 2%; }
   @media screen and (min-width: 1199px) {
     .light-slider__text {
@@ -866,7 +872,7 @@
   height: auto; }
   @media screen and (max-width: 991px) {
     .light-slider__photo-client {
-      width: 100%; } }
+      width: 85%; } }
 
 .light-slider__feedback {
   background: #fed22a;

@@ -21,6 +21,6 @@ function unlockBody() {
 		"position":"",
 		"top": ""
 	});
-	document.querySelector("body").scrollTop = currentСoordinate;
-	document.querySelector("html,body").scrollTop = currentСoordinate;
+		document.querySelector("body").scrollTop = currentСoordinate;
+		document.querySelector("html,body").scrollTop = currentСoordinate;
 }
