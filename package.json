@@ -27,7 +27,7 @@
     "gulp-uglify": "^3.0.2",
     "gulp-wiredep": "^1.2.0",
     "node-normalize-scss": "^8.0.1",
-    "node-sass": "^4.13.1"
+    "node-sass": "^7.0.0"
   },
   "dependencies": {
     "del": "^3.0.0",
